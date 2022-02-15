@@ -1,0 +1,41 @@
+
+.box:after{
+    /*box_parent:float형 자식의 가출을 막는 기능*/
+
+    /* 블럭모델 추가*/
+    display: block;
+    /* float태그후 clear*/
+    clear: both;
+    /*공백 내용 추가*/
+    content: '';
+}
+.blind {
+    /*웹접근성-스크린리더를 위한 기능
+        화면에는 보이지 않지만 소스상에서는 보이도록
+        완전 없앨시에는 display:none
+    */
+
+    /* 레이아웃에 영향을 끼치지 않도록 */
+    position: absolute;
+
+    /* 스크린 리더가 읽을 수 있도록 */
+    width: 1px;
+    height: 1px;
+
+    /* 눈에 보이는 부분을 제거 */
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+
+.MinMaxWidthHeigh{
+    /* 사이트의 최대 길이를 설정 */
+    /* margin 0 auto 를 쓸시 중앙정렬*/
+    max-width: none;
+    min-width: none;
+
+    max-height: none;
+    min-height: none;
+}
